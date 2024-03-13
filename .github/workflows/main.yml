@@ -30,9 +30,9 @@ jobs:
             -Dsonar.login=${{ secrets.SONAR_TOKEN }}
             -Dsonar.organization=${{ secrets.SONAR_ORGANIZATION }}
             -Dsonar.projectKey=${{ secrets.SONAR_PROJECT_KEY }}
-            -Dsonar.sources=$GITHUB_WORKSPACE
             -Dsonar.sources=src/
-            -Dsonar.junit.reportsPatch=target/surefire-reports/
+            -Dsonar.junit.reportsPath=target/surefire-reports/
+            -Dsonar.jacoco.reportsPath=targer/jacoco.exec
             -Dsonar.java.checkstyle.reportPaths=target/checkstyle-result.xml
             -Dsonar.java.binaries=target/test-classes/com/visualpathit/account
 #
